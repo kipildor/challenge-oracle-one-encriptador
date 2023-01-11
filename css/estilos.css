@@ -1,4 +1,10 @@
-
+body{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-image: url("../imagenes/fondo01.jpg");
+}
 .contenedor{
     /* Encriptador - 1 Desktop */
     position: relative;
@@ -6,21 +12,36 @@
     height: 1024px;
     /* Light blue/light-blue-100 */
     background: #F3F5FC;
+    /*float: left;*/
+    
 }
+.contenedorIzquierda{
+    max-width: 960px;
+    margin-top: 40px;
+    margin-left: 40px;
+    /*max-height: 949px;*/
+    height: 949px;
+    background-color: violet;
+}
+
+
 /* Logo */
 #contenedorLogo{
     /* Auto layout */
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 40px;
-
+    /*
     position: absolute;
     width: 120px;
     height: 48px;
     left: 40px;
     top: 40px;
+    */
+
 }
 #textoPlano{
     /* Ingrese el texto aqui */
@@ -50,7 +71,7 @@
     width: 680px;
     height: 105px;
     left: 240px;
-    top: 885px;
+    bottom: 72px;
 }
 .aclaracion{
     /* Frame 1 */
@@ -65,7 +86,21 @@
     width: 229px;
     height: 18px;
     left: 240px;
-    top: 813px;
+    top: 851px;
+}
+#simboloAclaracion{
+    /* bi:exclamation-circle-fill */
+    width: 16px;
+    height: 16px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: #495057;
+    color: #f3f5fc;
+    text-align: center;
+    border-style: solid;
+    border-radius: 16px;
 }
 .aclaracionTexto{
     /* Solo letras minúsculas y sin acentos */
@@ -103,13 +138,7 @@
 }
 #btnEncriptar{
     /* Button */
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 8px;
-
+    
     width: 328px;
     height: 67px;
     /* Dark blue/dark-blue-300 */
@@ -119,17 +148,23 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
 }
 #btnDesencriptar{
     /* Button */
     box-sizing: border-box;
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 8px;
-
+   
     width: 328px;
     height: 67px;
     /* Light gray */
@@ -143,3 +178,41 @@
     flex-grow: 0;
 }
 
+.contenedorDerecha{
+    position: absolute;
+    max-width: 400px;
+    height: 949px;
+    left: 1000px;
+    top: 41px;
+    /* White */
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    align-items: center;
+    display: flex;
+
+}
+.agrupadorSinMensaje{
+    
+    align-items: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 0 auto;
+}
+#imagenMujer{
+    object-fit: contain;
+}
+
+
+.agrupadorConMensaje{
+    align-items: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 0 auto;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    
+}

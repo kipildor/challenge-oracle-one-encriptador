@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
     <title>Encriptador</title>
 </head>
 <body>
     <div id="contenedor" class="contenedor">
-        <div class="contenedorIzquierdo">
-            <div class="contenedorLogo" id="contenedorLogo">
-                <img src="imagenes/Logo.png" id="logoAlura" alt="Logo A de Alura">
-            </div>
+        <div class="contenedorIzquierda">
+            <header>
+                <div class="contenedorLogo" id="contenedorLogo">
+                    <img src="imagenes/Logo.png" id="logoAlura" alt="Logo A de Alura">
+                </div>
+            </header>
             <div id="contenedorFormulario">
                 <form action="">
                     <textarea name="textoPlano" id="textoPlano" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
 
                     <div id="contenedorInferior_">
-                        <div class="aclaracion"><div class="aclaracionTexto">Solo letras minúsculas y sin acentos</div></div>
+                        <div class="aclaracion"><div id="simboloAclaracion">!</div><div class="aclaracionTexto">Solo letras minúsculas y sin acentos</div></div>
                         <div class="contenedorBotones">
                             <button id="btnEncriptar">Encriptar</button>
                             <button id="btnDesencriptar">Desencriptar</button>
@@ -29,7 +32,27 @@
             </div>
 
         </div>
-        <div class="contenedorDerecho">
+        <div class="contenedorDerecha">
+            <div class="agrupadorSinMensaje">
+                <div id="contenedorImagenMujer">
+                    <img src="imagenes/mujer.png" alt="mujer con lupa" id="imagenMujer">
+                </div>
+                <div id="tituloBajoMujer">
+                    <h1>Ningún mensaje fue encontrado</h1>
+                </div>
+                <div id="instruccionBajoMujer">
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+
+            <div class="agrupadorConMensaje">
+                <div id="textoCifrado">
+
+                </div>
+                <div class="contenedorBoton">
+                    <button id="btnCopiar">Copiar</button>
+                </div>
+            </div>
 
         </div>
 
