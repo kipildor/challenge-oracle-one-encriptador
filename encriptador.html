@@ -12,23 +12,23 @@
 <body>
     <div id="contenedor" class="contenedor">
         <div class="contenedorIzquierda">
-            <header>
+            <header class="encabezado">
                 <div class="contenedorLogo" id="contenedorLogo">
                     <img src="imagenes/Logo.png" id="logoAlura" alt="Logo A de Alura">
                 </div>
             </header>
-            <div id="contenedorFormulario">
-                <form action="">
+            <div class="contenedorFormulario">
+                <!--<form action="">-->
                     <textarea name="textoPlano" id="textoPlano" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
 
-                    <div id="contenedorInferior_">
+                    <div class="contenedorInferior">
                         <div class="aclaracion"><div id="simboloAclaracion">!</div><div class="aclaracionTexto">Solo letras minúsculas y sin acentos</div></div>
                         <div class="contenedorBotones">
                             <button id="btnEncriptar">Encriptar</button>
                             <button id="btnDesencriptar">Desencriptar</button>
                         </div>
                     </div>
-                </form>
+                <!--</form>-->
             </div>
 
         </div>
@@ -46,12 +46,16 @@
             </div>
 
             <div class="agrupadorConMensaje">
-                <div id="textoCifrado">
-
+                <div id="contenedorTextoCifrado">
+                    <textarea id="textoCifrado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</textarea>
+                        
+                    
                 </div>
-                <div class="contenedorBoton">
+                
+                <div class="contenedorBotonCopiar">
                     <button id="btnCopiar">Copiar</button>
                 </div>
+                
             </div>
 
         </div>

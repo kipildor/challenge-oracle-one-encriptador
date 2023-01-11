@@ -1,19 +1,18 @@
 body{
     margin: 0 auto;
     text-align: center;
-    /*display: flex;
-    justify-content: center;*/
+    display: flex;
+    justify-content: center;
     background-image: url("../imagenes/fondo01.jpg");
 }
 .contenedor{
     /* Encriptador - 1 Desktop */
-    width: 1440px;
-    height: 1024px;
+    position: relative;
     max-width: 1440px;
     max-height: 1024px;
     /* Light blue/light-blue-100 */
     background: #F3F5FC;
-    margin: 0 auto;
+    /*float: left;*/
     box-sizing: border-box;
 }
 .contenedorIzquierda{
@@ -24,80 +23,86 @@ body{
     float: left;
     /*max-height: 949px;*/
     height: 949px;
-    /*background-color: violet;*/
+    background-color: violet;
 }
 .encabezado{
     width: 100%;
     height: 50px;
     max-width: 1440px;
-    text-align: left;
 }
 
 
 /* Logo */
 #contenedorLogo{
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+    /*
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+    */
 
 }
+#textoPlano{
+    /* Ingrese el texto aqui */
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
 
-.contenedorFormulario {
-    margin-left: 240px;
-    height: 800px;
-    max-height: 800px;
-}
-.contenedorFormulario textarea{
-    width: 100%;
-    max-width: 680px;
-    height: 755px;
-    max-height: 755px;
-    /*margin-left: 120px;*/
-    color: #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    background: none;
-    border: none;
-    border-style: none;
-    resize: none;
-}
-.contenedorFormulario textarea::placeholder {
+    line-height: 150%;
+    /* identical to box height, or 48px */
+    /* Dark blue/dark-blue-300 */
     color: #0A3871;
 }
-/*
-.contenedorFormulario textarea:focus {
-    border: none;
-    border-style: none;
-}
-*/
+#contenedorInferior{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
 
-
-.contenedorInferior{
-    width: max-content;
+    position: absolute;
+    width: 680px;
     height: 105px;
-    /*margin-bottom: 40px;*/
-    display: block;
-    /*align-items: flex-end;*/
+    left: 240px;
+    bottom: 72px;
 }
 .aclaracion{
     /* Frame 1 */
     /* Auto layout */
-    /*display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 8px;
-*/
-    text-align: left;
+
+    position: absolute;
     width: 229px;
     height: 18px;
-    margin-bottom: 16px;
+    left: 240px;
+    top: 851px;
 }
 #simboloAclaracion{
     /* bi:exclamation-circle-fill */
     width: 16px;
     height: 16px;
     /* Inside auto layout */
-    float: left;
-    /*order: 0;
-    flex-grow: 0;*/
+    flex: none;
+    order: 0;
+    flex-grow: 0;
     background: #495057;
     color: #f3f5fc;
     text-align: center;
@@ -108,9 +113,8 @@ body{
     /* Solo letras minúsculas y sin acentos */
     width: 205px;
     height: 18px;
-    float: left;
 
-    /*font-family: 'Inter';*/
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -124,7 +128,6 @@ body{
     order: 1;
     flex-grow: 0;
 }
-
 .contenedorBotones{
     /* Frame 3 */
     /* Auto layout */
@@ -137,8 +140,8 @@ body{
     position: absolute;
     width: 680px;
     height: 67px;
-    max-width: 680px;
-    
+    left: 240px;
+    top: 885px;
 }
 #btnEncriptar{
     /* Button */
@@ -181,10 +184,10 @@ body{
     order: 1;
     flex-grow: 0;
 }
+
 .contenedorDerecha{
     /*position: absolute;*/
     float: right;
-    width: 400px;
     max-width: 400px;
     height: 949px;
     /*left: 1000px;
@@ -196,19 +199,16 @@ body{
     /* shadow */
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    /*align-items: center;*/
+    align-items: center;
     display: flex;
-    
-}
 
+}
 .agrupadorSinMensaje{
     
     align-items: center;
     margin: 0 auto;
     vertical-align: middle;
     padding: 0 auto;
-    display: none;
-    float: left;
 }
 #imagenMujer{
     object-fit: contain;
@@ -218,66 +218,11 @@ body{
 .agrupadorConMensaje{
     align-items: center;
     margin: 0 auto;
-    /*vertical-align: middle;*/
-    padding: 32px auto;
-    /*display: flex;*/
-    /*background-color: chartreuse;*/
-    box-sizing: border-box;
-    float: left;
+    vertical-align: middle;
+    padding: 0 auto;
+    display: none;
 }
 
-#contenedorTextoCifrado {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    align-items: flex-start;
-    padding: 32px 0px;
-    /*gap: 24px;*/
-
-    position: relative;
-    width: 336px;
-    max-width: 336px;
-    height: 781px;
-    max-height: 781px;
+@media screen and (max-width:768px) {
     
-    /*background-color: aqua;*/
-}
-#contenedorTextoCifrado #textoCifrado {
-    width: 336px;
-    max-width: 336px;
-    height: 781px;
-    max-height: 781px;
-    
-    text-align: left;
-    color: #0A3871;
-    font-weight: 400;
-    font-size: 32px;
-    background: none;
-    border: none;
-    border-style: none;
-    resize: none;
-}
-
-.contenedorBotonCopiar {
-    float: left;
-    align-items: flex-end;
-    /*background-color: blanchedalmond;*/
-}
-
-#btnCopiar {
-    /* Button */
-    box-sizing: border-box;
-   
-    width: 328px;
-    height: 67px;
-    /* Light gray */
-    background: #D8DFE8;
-    /* Dark blue/dark-blue-300 */
-    border: 1px solid #0A3871;
-    border-radius: 24px;
-    /* Inside auto layout 
-    flex: none;
-    order: 1;
-    flex-grow: 0;*/
-    /*display: flex;
-    align-items: flex-end;*/
 }
