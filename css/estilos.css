@@ -58,6 +58,9 @@ body{
     border-style: none;
     resize: none;
 }
+.textoMensaje:focus{
+    outline: none;
+}
 .contenedorFormulario textarea::placeholder {
     color: #0A3871;
 }
@@ -198,29 +201,47 @@ body{
     border-radius: 32px;
     /*align-items: center;*/
     display: flex;
+    align-items: center;
     
 }
 
 .agrupadorSinMensaje{
     
-    align-items: center;
+    
     margin: 0 auto;
-    vertical-align: middle;
+    display: block;
+    align-items: center;
+    align-self: center;
+    /*vertical-align: middle;*/
     padding: 0 auto;
-    display: none;
+    
     float: left;
+}
+.contenedorImagenMujer{
+    display: block;
 }
 #imagenMujer{
     object-fit: contain;
+    /*display: block;*/
 }
-
-
+/*
+.agrupadorBajoMujer{
+    vertical-align: middle;
+}
+#tituloBajoMujer, #instruccionBajoMujer{
+    display: block;
+}
+#tituloBajoMujer h1{
+    display: flex;
+    vertical-align: middle;
+}
+*/
 .agrupadorConMensaje{
     align-items: center;
     margin: 0 auto;
     /*vertical-align: middle;*/
     padding: 32px auto;
-    /*display: flex;*/
+    display: none;
     /*background-color: chartreuse;*/
     box-sizing: border-box;
     float: left;
@@ -280,4 +301,103 @@ body{
     flex-grow: 0;*/
     /*display: flex;
     align-items: flex-end;*/
+}
+
+/************************************************************/
+@media screen and (max-width:768px) {
+    .contenedor{
+        height: 2000px;
+        min-height: 1174px;
+        max-height: fit-content;
+        width: 768px;
+        max-width: 768px;
+        display: block;
+        /*box-sizing: border-box;*/
+    }
+    .contenedorIzquierda{
+        display: block;
+        width: 768px;
+        max-width: 768px;
+        float: left;
+        height: 950px;
+        margin-left: 0px;
+    }
+    .contenedorFormulario{
+        margin-left: 0px;
+    }
+    .contenedorInferior{
+        margin-left: 40px;
+    }
+    .contenedorDerecha{
+        /*display: block;*/
+        /*float: left;*/
+        width: 688px;
+        max-width: 688px;
+        /*height: 133px;*/
+        min-height: 133px;
+        /*margin: 0 auto;*/
+        max-height: fit-content;
+        text-align: center;
+    }
+    #contenedorTextoCifrado #textoCifrado {
+        width: 600px;
+        max-width: 600px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+        min-height: 133px;
+        /*max-height: 600px;*/
+        max-height: fit-content;
+        height: 500px;
+    }
+    .agrupadorSinMensaje, .agrupadorConMensaje{
+        /*margin: 0 auto;*/
+        text-align: center;
+    }
+    .contenedorImagenMujer{
+        display: none;
+    }
+
+    .agrupadorSinMensaje{
+        /*display: none;*/
+    }
+    .agrupadorConMensaje{
+        margin: 0;
+        width: 100%;
+        /*display: block;*/
+    }
+    #contenedorTextoCifrado{
+        width: 640px;
+        max-width: 640px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .agrupadorConMensaje .contenedorBotonCopiar{
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        padding-left: 40px;
+    }
+    #btnCopiar{
+        /*justify-content: center;*/
+        margin: 0 auto;
+        width: 620px;
+    }
+}
+
+@media screen and (max-width:480px) {
+   
+    .contenedorImagenMujer{
+        display: none;
+    }
+    .contenedorInferior{
+        display: block;
+    }
+    .contenedorInferior .contenedorBotones {
+        display: block;
+    }
+    #btnEncriptar, #btnDesencriptar {
+        display: block;
+    }
+
 }
